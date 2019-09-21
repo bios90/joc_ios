@@ -28,6 +28,10 @@
 		E41CF894230F55780088AFC9 /* RepoOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41CF893230F55780088AFC9 /* RepoOrders.swift */; };
 		E41CF896230F62F40088AFC9 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41CF895230F62F40088AFC9 /* OrderView.swift */; };
 		E41CF898230F6C440088AFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E41CF897230F6C440088AFC9 /* Assets.xcassets */; };
+		E4375ED523243A060020F5F7 /* BtnRoundedToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4375ED423243A060020F5F7 /* BtnRoundedToggle.swift */; };
+		E4375ED7232451D40020F5F7 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4375ED6232451D40020F5F7 /* Montserrat-Light.ttf */; };
+		E4375ED923246C500020F5F7 /* BtnGreenGrad.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4375ED823246C500020F5F7 /* BtnGreenGrad.swift */; };
+		E4375EDB232473790020F5F7 /* CounterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4375EDA232473790020F5F7 /* CounterHelper.swift */; };
 		E43A524123115E5C0094E1CB /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A524023115E5C0094E1CB /* RatingView.swift */; };
 		E43A5244231168ED0094E1CB /* ExtModelRestaraunt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A5243231168ED0094E1CB /* ExtModelRestaraunt.swift */; };
 		E43A5246231182630094E1CB /* TabItemText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43A5245231182630094E1CB /* TabItemText.swift */; };
@@ -48,6 +52,12 @@
 		E45CFB702310B6F1003D55A2 /* RestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFB6F2310B6F1003D55A2 /* RestView.swift */; };
 		E45CFB722310B983003D55A2 /* VCCafeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFB712310B983003D55A2 /* VCCafeList.swift */; };
 		E45CFB742310BB07003D55A2 /* VCRestraunts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45CFB732310BB07003D55A2 /* VCRestraunts.swift */; };
+		E45D115B23293DCB001789F0 /* FawArrowBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D115A23293DCB001789F0 /* FawArrowBack.swift */; };
+		E45D115D23295039001789F0 /* BaseSwipableTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D115C23295039001789F0 /* BaseSwipableTabController.swift */; };
+		E45D116023295C96001789F0 /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D115F23295C96001789F0 /* BaseNavController.swift */; };
+		E45D116223297236001789F0 /* LaProfileExitdialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D116123297236001789F0 /* LaProfileExitdialog.swift */; };
+		E45D116423297C4E001789F0 /* StaticViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D116323297C4E001789F0 /* StaticViews.swift */; };
+		E45D1166232988D7001789F0 /* LaFinalDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D1165232988D7001789F0 /* LaFinalDialog.swift */; };
 		E467EB15231693F600DF32E9 /* CellProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E467EB14231693F600DF32E9 /* CellProduct.swift */; };
 		E467EB17231694AC00DF32E9 /* LaProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E467EB16231694AC00DF32E9 /* LaProduct.swift */; };
 		E467EB1923169D6600DF32E9 /* VCProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E467EB1823169D6600DF32E9 /* VCProducts.swift */; };
@@ -90,6 +100,9 @@
 		E4D8507F230CC3E9001CB916 /* LaRedAlerter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8507E230CC3E9001CB916 /* LaRedAlerter.swift */; };
 		E4D85081230CC437001CB916 /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D85080230CC437001CB916 /* MessagesManager.swift */; };
 		E4D85083230CC6DC001CB916 /* StringManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D85082230CC6DC001CB916 /* StringManager.swift */; };
+		E4FED0D72325B8D800FBCC9E /* Model_Added_Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FED0D62325B8D800FBCC9E /* Model_Added_Item.swift */; };
+		E4FED0D92325C2F700FBCC9E /* VCBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FED0D82325C2F700FBCC9E /* VCBasket.swift */; };
+		E4FED0DB2325C67600FBCC9E /* LaBasketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FED0DA2325C67600FBCC9E /* LaBasketItem.swift */; };
 		F90DDAD0B96AD6B0BB066715 /* Pods_Joc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32EC92C6268368DBB70B8A41 /* Pods_Joc.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +131,10 @@
 		E41CF893230F55780088AFC9 /* RepoOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoOrders.swift; sourceTree = "<group>"; };
 		E41CF895230F62F40088AFC9 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		E41CF897230F6C440088AFC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E4375ED423243A060020F5F7 /* BtnRoundedToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnRoundedToggle.swift; sourceTree = "<group>"; };
+		E4375ED6232451D40020F5F7 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		E4375ED823246C500020F5F7 /* BtnGreenGrad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnGreenGrad.swift; sourceTree = "<group>"; };
+		E4375EDA232473790020F5F7 /* CounterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterHelper.swift; sourceTree = "<group>"; };
 		E43A524023115E5C0094E1CB /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		E43A5243231168ED0094E1CB /* ExtModelRestaraunt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtModelRestaraunt.swift; sourceTree = "<group>"; };
 		E43A5245231182630094E1CB /* TabItemText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemText.swift; sourceTree = "<group>"; };
@@ -140,6 +157,12 @@
 		E45CFB6F2310B6F1003D55A2 /* RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
 		E45CFB712310B983003D55A2 /* VCCafeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCafeList.swift; sourceTree = "<group>"; };
 		E45CFB732310BB07003D55A2 /* VCRestraunts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRestraunts.swift; sourceTree = "<group>"; };
+		E45D115A23293DCB001789F0 /* FawArrowBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FawArrowBack.swift; sourceTree = "<group>"; };
+		E45D115C23295039001789F0 /* BaseSwipableTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSwipableTabController.swift; sourceTree = "<group>"; };
+		E45D115F23295C96001789F0 /* BaseNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
+		E45D116123297236001789F0 /* LaProfileExitdialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaProfileExitdialog.swift; sourceTree = "<group>"; };
+		E45D116323297C4E001789F0 /* StaticViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticViews.swift; sourceTree = "<group>"; };
+		E45D1165232988D7001789F0 /* LaFinalDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaFinalDialog.swift; sourceTree = "<group>"; };
 		E467EB14231693F600DF32E9 /* CellProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellProduct.swift; sourceTree = "<group>"; };
 		E467EB16231694AC00DF32E9 /* LaProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaProduct.swift; sourceTree = "<group>"; };
 		E467EB1823169D6600DF32E9 /* VCProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCProducts.swift; sourceTree = "<group>"; };
@@ -182,6 +205,9 @@
 		E4D8507E230CC3E9001CB916 /* LaRedAlerter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaRedAlerter.swift; sourceTree = "<group>"; };
 		E4D85080230CC437001CB916 /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
 		E4D85082230CC6DC001CB916 /* StringManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringManager.swift; sourceTree = "<group>"; };
+		E4FED0D62325B8D800FBCC9E /* Model_Added_Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model_Added_Item.swift; sourceTree = "<group>"; };
+		E4FED0D82325C2F700FBCC9E /* VCBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCBasket.swift; sourceTree = "<group>"; };
+		E4FED0DA2325C67600FBCC9E /* LaBasketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaBasketItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +310,7 @@
 				E45CFB732310BB07003D55A2 /* VCRestraunts.swift */,
 				E467EB1A23169FA200DF32E9 /* VCCafe.swift */,
 				E467EB1E2317118E00DF32E9 /* VCCafeInfo.swift */,
+				E4FED0D82325C2F700FBCC9E /* VCBasket.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -310,6 +337,7 @@
 				E41CF88D230F3C3C0088AFC9 /* Model_Product.swift */,
 				E41CF891230F518F0088AFC9 /* Model_Order.swift */,
 				E403F5742319C0B900890240 /* Model_Reply.swift */,
+				E4FED0D62325B8D800FBCC9E /* Model_Added_Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -349,6 +377,9 @@
 				E43A524023115E5C0094E1CB /* RatingView.swift */,
 				E43A5245231182630094E1CB /* TabItemText.swift */,
 				E43A52492311BDC90094E1CB /* MarkerView.swift */,
+				E4375ED423243A060020F5F7 /* BtnRoundedToggle.swift */,
+				E4375ED823246C500020F5F7 /* BtnGreenGrad.swift */,
+				E45D115A23293DCB001789F0 /* FawArrowBack.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -374,6 +405,7 @@
 				E43A5243231168ED0094E1CB /* ExtModelRestaraunt.swift */,
 				E43A5247231187570094E1CB /* ExtTabItem.swift */,
 				E467EB1C231700F500DF32E9 /* ExtModelProduct.swift */,
+				E45D116323297C4E001789F0 /* StaticViews.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -395,6 +427,7 @@
 				E4A3C926230E08E40077F205 /* Font Awesome 5 Pro-Light-300.otf */,
 				E4A3C925230E08E40077F205 /* Font Awesome 5 Pro-Regular-400.otf */,
 				E4A3C924230E08E30077F205 /* Font Awesome 5 Pro-Solid-900.otf */,
+				E4375ED6232451D40020F5F7 /* Montserrat-Light.ttf */,
 				E4D85055230C406C001CB916 /* Montserrat-Bold.ttf */,
 				E4D85056230C406D001CB916 /* Montserrat-Medium.ttf */,
 				E4D85057230C406D001CB916 /* Montserrat-Regular.ttf */,
@@ -413,6 +446,9 @@
 				E467EB16231694AC00DF32E9 /* LaProduct.swift */,
 				E403F57A2319C9EE00890240 /* LaReply.swift */,
 				E454A69A231C88780099ED36 /* LaProductDialog.swift */,
+				E4FED0DA2325C67600FBCC9E /* LaBasketItem.swift */,
+				E45D116123297236001789F0 /* LaProfileExitdialog.swift */,
+				E45D1165232988D7001789F0 /* LaFinalDialog.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -444,6 +480,7 @@
 				E4D85080230CC437001CB916 /* MessagesManager.swift */,
 				E4D85082230CC6DC001CB916 /* StringManager.swift */,
 				E454A69C231C8A400099ED36 /* Configs.swift */,
+				E4375EDA232473790020F5F7 /* CounterHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -453,6 +490,8 @@
 			children = (
 				E4D8507A230CBE37001CB916 /* BaseViewContoller.swift */,
 				E4A3C934230E0E5D0077F205 /* BaseTabContoller.swift */,
+				E45D115C23295039001789F0 /* BaseSwipableTabController.swift */,
+				E45D115F23295C96001789F0 /* BaseNavController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -527,6 +566,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4375ED7232451D40020F5F7 /* Montserrat-Light.ttf in Resources */,
 				E4D8505D230C4738001CB916 /* Montserrat-Regular.ttf in Resources */,
 				E4D8505B230C4733001CB916 /* Montserrat-Bold.ttf in Resources */,
 				E41CF898230F6C440088AFC9 /* Assets.xcassets in Resources */,
@@ -597,6 +637,7 @@
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftEntryKit/SwiftEntryKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwipeableTabBarController/SwipeableTabBarController.framework",
+				"${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -606,6 +647,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEntryKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeableTabBarController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinyConstraints.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -630,7 +672,9 @@
 				E45CFB6A23102090003D55A2 /* ShadowRoundView.swift in Sources */,
 				E4A3C8CA230D6FAD0077F205 /* LocalDatabase.swift in Sources */,
 				E44695EA230C1DB300BFA88E /* VCFirst.swift in Sources */,
+				E4375ED523243A060020F5F7 /* BtnRoundedToggle.swift in Sources */,
 				E4D8506E230C865B001CB916 /* FawStrings.swift in Sources */,
+				E4FED0D92325C2F700FBCC9E /* VCBasket.swift in Sources */,
 				E4D85050230C3833001CB916 /* ExtViews.swift in Sources */,
 				E403F5792319C6C000890240 /* CellReply.swift in Sources */,
 				E41CF890230F3FA60088AFC9 /* RepoProducts.swift in Sources */,
@@ -650,18 +694,26 @@
 				E41CF892230F518F0088AFC9 /* Model_Order.swift in Sources */,
 				E4D85048230C346F001CB916 /* EtUnderline.swift in Sources */,
 				E41CF88C230F3BFE0088AFC9 /* Model_Weight.swift in Sources */,
+				E45D1166232988D7001789F0 /* LaFinalDialog.swift in Sources */,
 				E467EB1B23169FA200DF32E9 /* VCCafe.swift in Sources */,
+				E4375EDB232473790020F5F7 /* CounterHelper.swift in Sources */,
 				E4A3C8C7230D6E050077F205 /* Model_User.swift in Sources */,
 				E4D85072230CB440001CB916 /* VCRegister.swift in Sources */,
 				E41CF878230F081F0088AFC9 /* VProfile.swift in Sources */,
 				E467EB21231711E400DF32E9 /* CellRestarauntTop.swift in Sources */,
+				E45D115D23295039001789F0 /* BaseSwipableTabController.swift in Sources */,
 				E41CF886230F35830088AFC9 /* DateManager.swift in Sources */,
 				E467EB15231693F600DF32E9 /* CellProduct.swift in Sources */,
+				E4FED0DB2325C67600FBCC9E /* LaBasketItem.swift in Sources */,
 				E44695D4230C147400BFA88E /* AppDelegate.swift in Sources */,
+				E45D116223297236001789F0 /* LaProfileExitdialog.swift in Sources */,
 				E43A524123115E5C0094E1CB /* RatingView.swift in Sources */,
+				E45D116423297C4E001789F0 /* StaticViews.swift in Sources */,
 				E4D85065230C81EB001CB916 /* FawLabel.swift in Sources */,
 				E4D85070230CB174001CB916 /* VRegister.swift in Sources */,
 				E41CF87E230F13550088AFC9 /* ExtDevice.swift in Sources */,
+				E45D115B23293DCB001789F0 /* FawArrowBack.swift in Sources */,
+				E4375ED923246C500020F5F7 /* BtnGreenGrad.swift in Sources */,
 				E45CFB722310B983003D55A2 /* VCCafeList.swift in Sources */,
 				E41CF88A230F3BBC0088AFC9 /* Model_Milk.swift in Sources */,
 				E4A3C933230E0DB90077F205 /* VCMain.swift in Sources */,
@@ -670,9 +722,11 @@
 				E41CF88E230F3C3C0088AFC9 /* Model_Product.swift in Sources */,
 				E4A3C92E230E09D20077F205 /* VMap.swift in Sources */,
 				E467EB1923169D6600DF32E9 /* VCProducts.swift in Sources */,
+				E45D116023295C96001789F0 /* BaseNavController.swift in Sources */,
 				E41CF894230F55780088AFC9 /* RepoOrders.swift in Sources */,
 				E4D85078230CBC59001CB916 /* NavigationManager.swift in Sources */,
 				E4D8504B230C359C001CB916 /* Colors.swift in Sources */,
+				E4FED0D72325B8D800FBCC9E /* Model_Added_Item.swift in Sources */,
 				E467EB1D231700F500DF32E9 /* ExtModelProduct.swift in Sources */,
 				E4D85063230C7CB4001CB916 /* LaGreenAlerter.swift in Sources */,
 				E43A524A2311BDC90094E1CB /* MarkerView.swift in Sources */,
@@ -838,6 +892,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MVLLM6MN87;
 				INFOPLIST_FILE = Joc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -846,7 +901,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dimfcompany.Joc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -856,6 +911,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MVLLM6MN87;
 				INFOPLIST_FILE = Joc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -864,7 +920,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dimfcompany.Joc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -15,6 +15,17 @@ class Fonts : NSObject
     let size_xl : CGFloat = 27
     let size_xxl : CGFloat = 30
     
+    
+    var font_light_tiny:UIFont?
+    var font_light_xxxs:UIFont?
+    var font_light_xxs:UIFont?
+    var font_light_xs:UIFont?
+    var font_light_s:UIFont?
+    var font_light_m:UIFont?
+    var font_light_l:UIFont?
+    var font_light_xl:UIFont?
+    var font_light_xxl:UIFont?
+    
     var font_reg_tiny:UIFont?
     var font_reg_xxxs:UIFont?
     var font_reg_xxs:UIFont?
@@ -61,6 +72,7 @@ class Fonts : NSObject
     let font_faw_light_xl :UIFont?
     let font_faw_light_xxl:UIFont?
     
+    private let font_light_name = "Montserrat-Light"
     private let font_reg_name = "Montserrat-Regular"
     private let font_medium_name = "Montserrat-Medium"
     private let font_semi_name = "Montserrat-SemiBold"
@@ -71,6 +83,16 @@ class Fonts : NSObject
     
     override init()
     {
+        font_light_tiny = UIFont(name:font_light_name,size:size_tiny)
+        font_light_xxxs = UIFont(name:font_light_name,size:size_xxxs)
+        font_light_xxs = UIFont(name:font_light_name,size:size_xxs)
+        font_light_xs  = UIFont(name:font_light_name,size:size_xs )
+        font_light_s  = UIFont(name:font_light_name,size:size_s )
+        font_light_m  = UIFont(name:font_light_name,size:size_m )
+        font_light_l  = UIFont(name:font_light_name,size:size_l )
+        font_light_xl  = UIFont(name:font_light_name,size:size_xl )
+        font_light_xxl = UIFont(name:font_light_name,size:size_xxl)
+        
         font_reg_tiny = UIFont(name:font_reg_name,size:size_tiny)
         font_reg_xxxs = UIFont(name:font_reg_name,size:size_xxxs)
         font_reg_xxs = UIFont(name:font_reg_name,size:size_xxs)

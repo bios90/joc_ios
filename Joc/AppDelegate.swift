@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Joc
-//
-//  Created by Филипп Бесядовский on 20/08/2019.
-//  Copyright © 2019 dimfcompany. All rights reserved.
-//
-
 import UIKit
 import GoogleMaps
 import GooglePlaces
@@ -22,11 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSPlacesClient.provideAPIKey("AIzaSyAHoROJoCnsD4-7gkV4uPWo0j4DwyyLRU4")
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        if let window = self.window
+            if let window = self.window
         {
             window.backgroundColor = UIColor.white
+
+            let nav = BaseNavController()
             
-            let nav = UINavigationController()
             let mainView = VCFirst()
             nav.viewControllers = [mainView]
             window.rootViewController = nav

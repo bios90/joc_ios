@@ -15,4 +15,8 @@ extension String
             return false
         }
     }
+    
+    
 }
+
+extension String: Error {}

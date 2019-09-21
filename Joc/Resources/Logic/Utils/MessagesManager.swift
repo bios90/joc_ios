@@ -34,7 +34,7 @@ class MessagesManager
         let heightConstraint = EKAttributes.PositionConstraints.Edge.intrinsic
         attributes.positionConstraints.size = .init(width: widthConstraint, height: heightConstraint)
         attributes.statusBar = .hidden
-        attributes.positionConstraints.verticalOffset = -44
+        attributes.positionConstraints.verticalOffset = -UIDevice.current.status_bar_height
         
         SwiftEntryKit.display(entry: view, using: attributes)
     }
@@ -44,8 +44,8 @@ class MessagesManager
         let view = LaGreenAlerter(text: text,faw_text: nil)
         let lbl_width = viewController.view!.frame.width - 76
         view.lbl_text?.widthAnchor.constraint(equalToConstant: lbl_width).isActive = true
-        view.lbl_text!.layoutIfNeeded()
         view.lbl_text!.sizeToFit()
+        view.lbl_text!.layoutIfNeeded()
         
         let message_height = view.lbl_text!.frame.height+84
         view.heightAnchor.constraint(equalToConstant: message_height).isActive = true
@@ -62,7 +62,7 @@ class MessagesManager
         let heightConstraint = EKAttributes.PositionConstraints.Edge.intrinsic
         attributes.positionConstraints.size = .init(width: widthConstraint, height: heightConstraint)
         attributes.statusBar = .hidden
-        attributes.positionConstraints.verticalOffset = -44
+        attributes.positionConstraints.verticalOffset = -UIDevice.current.status_bar_height
         
         SwiftEntryKit.display(entry: view, using: attributes)
     }
@@ -125,10 +125,12 @@ class MessagesManager
         SwiftEntryKit.display(entry: view, using: attributes)
     }
     
-    func show_product_dialog(product:Model_Product,ok_click: (() -> Void))
+    func show_product_dialog(product:Model_Product,listener:ProductDialogListener)
     {
-        let view = LaProductDialog(product: product)
-        view.resize_to_fit_vertical(padding_bottom: 40)
+        let view = LaProductDialog(product: product,listener:listener)
+        
+        var padding_bottom:CGFloat = 0
+        view.resize_to_fit_vertical(padding_bottom: padding_bottom)
     
         
         var attributes = EKAttributes()
@@ -143,7 +145,68 @@ class MessagesManager
         let heightConstraint = EKAttributes.PositionConstraints.Edge.intrinsic
         attributes.positionConstraints.size = .init(width: widthConstraint, height: heightConstraint)
         attributes.statusBar = .inferred
-//        attributes.positionConstraints.verticalOffset = -34
+        if(UIDevice.current.monobrow_screen)
+        {
+            attributes.positionConstraints.verticalOffset = -34
+        }
+        attributes.screenBackground = .color(color: EKColor(UIColor(white: 0.5, alpha: 0.5)))
+        
+        SwiftEntryKit.display(entry: view, using: attributes)
+    }
+    
+    
+    func showExitProfileDialog(clickedExit : (() -> Void)?,clickedCancel : (() -> Void)?)
+    {
+        let view = LaProfileExitdialog()
+        
+        view.clickExit = clickedExit
+        view.clickCancel = clickedCancel
+        view.height(200)
+        
+        var attributes = EKAttributes()
+        attributes.name = "Exit_Dialog"
+        attributes.windowLevel = .alerts
+        attributes.position = .bottom
+        attributes.displayDuration = 99
+        attributes.entryInteraction = .absorbTouches
+        attributes.screenInteraction = .dismiss
+        
+        let widthConstraint = EKAttributes.PositionConstraints.Edge.ratio(value: 1)
+        let heightConstraint = EKAttributes.PositionConstraints.Edge.intrinsic
+        attributes.positionConstraints.size = .init(width: widthConstraint, height: heightConstraint)
+        attributes.statusBar = .inferred
+        if(UIDevice.current.monobrow_screen)
+        {
+            attributes.positionConstraints.verticalOffset = -34
+        }
+        attributes.screenBackground = .color(color: EKColor(UIColor(white: 0.5, alpha: 0.5)))
+        
+        SwiftEntryKit.display(entry: view, using: attributes)
+    }
+    
+    func showFinalDialog(restaraunt:Model_Restaraunt, sum:Double, clickedOk : (() -> Void)?)
+    {
+        let view = LaFinalDialog(restaraunt: restaraunt,sum: sum)
+        view.resize_to_fit_vertical(padding_bottom: 0)
+        
+        view.clickedOk = clickedOk
+        
+        var attributes = EKAttributes()
+        attributes.name = "Final_Dialog"
+        attributes.windowLevel = .alerts
+        attributes.position = .bottom
+        attributes.displayDuration = 99
+        attributes.entryInteraction = .absorbTouches
+        attributes.screenInteraction = .dismiss
+        
+        let widthConstraint = EKAttributes.PositionConstraints.Edge.ratio(value: 1)
+        let heightConstraint = EKAttributes.PositionConstraints.Edge.intrinsic
+        attributes.positionConstraints.size = .init(width: widthConstraint, height: heightConstraint)
+        attributes.statusBar = .inferred
+        if(UIDevice.current.monobrow_screen)
+        {
+            attributes.positionConstraints.verticalOffset = -34
+        }
         attributes.screenBackground = .color(color: EKColor(UIColor(white: 0.5, alpha: 0.5)))
         
         SwiftEntryKit.display(entry: view, using: attributes)

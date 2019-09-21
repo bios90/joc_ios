@@ -16,9 +16,6 @@ class BaseTabController: UITabBarController
         
         self.navigationController?.navigationBar.isHidden = true
         
-//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: Fonts.getInstance.font_faw_light_xl], for: .normal)
-//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: Fonts.getInstance.font_faw_light_xl], for: .selected)
-        
         self.tabBar.barTintColor = Colors.getInstance.white
         self.tabBar.isTranslucent = false
         

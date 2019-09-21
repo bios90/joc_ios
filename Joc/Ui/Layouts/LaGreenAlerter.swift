@@ -56,6 +56,7 @@ class LaGreenAlerter : UIView
         lbl_text?.sizeToFit()
         self.layoutIfNeeded()
         
+        
         lbl_faw = FawLabel()
         lbl_faw?.textColor = Colors.getInstance.white
         lbl_faw?.font = Fonts.getInstance.font_faw_l

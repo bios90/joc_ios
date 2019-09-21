@@ -20,9 +20,9 @@ class NavigationManager
         viewController.navigationController?.pushViewController(VCRegister(), animated: true)
     }
     
-    func toVcMain()
+    func toVcMain(animated:Bool = true)
     {
-        viewController.navigationController!.pushViewController(VCMain(), animated: true)
+        viewController.navigationController!.pushViewController(VCMain(), animated: animated)
     }
     
     func toVcCafe(restaraunt:Model_Restaraunt)

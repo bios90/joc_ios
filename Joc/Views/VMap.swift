@@ -60,7 +60,6 @@ class VMap: UIView
         et_search.centerYAnchor.constraint(equalTo: view_for_search.centerYAnchor).isActive = true
         
         
-        
         let ic_search = FawLabel()
         ic_search.textColor = Colors.getInstance.gray3
         ic_search.text = FawStrings.search

@@ -17,11 +17,7 @@ extension UIDevice
     
     var monobrow_screen:Bool
     {
-        var name = modelName
-        
-        return true
-        
-        if(name.contains("iPhone11"))
+        if(status_bar_height > 40)
         {
             return true
         }
@@ -41,8 +37,9 @@ extension UIDevice
         }
     }
     
-    var status_bar_heigh:CGFloat
+    var status_bar_height:CGFloat
     {
+        print("Status bar height is \(UIApplication.shared.statusBarFrame.height)")
         return UIApplication.shared.statusBarFrame.height
     }
     

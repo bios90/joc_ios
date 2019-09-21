@@ -1,7 +1,7 @@
 
 import UIKit
 
-protocol ProductCardListener
+protocol ProductsListener
 {
     func clickedProductCard(prdouct:Model_Product)
 }
@@ -34,34 +34,41 @@ class CellProduct: UICollectionViewCell
         productView?.add_light_shadow()
         
         
-        let touchRecognizer = UILongPressGestureRecognizer(target:self, action: #selector(pressed))
-        touchRecognizer.minimumPressDuration = 0.03
-        contentView.addGestureRecognizer(touchRecognizer)
+        let tg = UITapGestureRecognizer(target: self, action: #selector(self.pressed))
         contentView.isUserInteractionEnabled = true
+        contentView.addGestureRecognizer(tg)
         contentView.clipsToBounds = true
+        contentView.remove_child_clicks()
+        
+//        let touchRecognizer = UILongPressGestureRecognizer(target:self, action: #selector(pressed))
+//        touchRecognizer.minimumPressDuration = 0.03
+//        contentView.addGestureRecognizer(touchRecognizer)
+//        contentView.isUserInteractionEnabled = true
+//        contentView.clipsToBounds = true
        
         contentView.bottomAnchor.constraint(equalTo: productView!.bottomAnchor, constant: 3).isActive = true
     }
     
     @objc func pressed(gesture: UILongPressGestureRecognizer)
     {
-        if gesture.state == .began
-        {
-            self.addDarkerView()
-        }
-        else if gesture.state == .ended || gesture.state == .cancelled
-        {
-            self.deleteDarkerView()
-            let touchPoint = gesture.location(in: self)
-            
-            let x = touchPoint.x
-            let y = touchPoint.y
-            
-            if((x < self.frame.width && x > 0) && (y < self.frame.height && y > 0))
-            {
-                click?()
-            }
-        }
+        click?()
+//        if gesture.state == .began
+//        {
+//            self.addDarkerView()
+//        }
+//        else if gesture.state == .ended || gesture.state == .cancelled
+//        {
+//            self.deleteDarkerView()
+//            let touchPoint = gesture.location(in: self)
+//
+//            let x = touchPoint.x
+//            let y = touchPoint.y
+//
+//            if((x < self.frame.width && x > 0) && (y < self.frame.height && y > 0))
+//            {
+//                click?()
+//            }
+//        }
     }
     
     func addDarkerView()

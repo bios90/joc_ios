@@ -31,8 +31,10 @@ class VCCafeInfo: UIViewController,UICollectionViewDelegate,UICollectionViewData
         layout.minimumLineSpacing = 0
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView!.backgroundColor = .clear
+        collectionView!.showsVerticalScrollIndicator = false
+        collectionView!.isPagingEnabled = true
         self.view.addSubview(collectionView!)
-        collectionView?.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, centerX: nil, centerY: nil, paddingTop: -UIDevice.current.status_bar_heigh, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        collectionView?.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, centerX: nil, centerY: nil, paddingTop: -UIDevice.current.status_bar_height, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
         
         collectionView!.register(CellRestarauntTop.self, forCellWithReuseIdentifier: CellRestarauntTop.cell_name)
         collectionView!.register(CellReplyLabel.self, forCellWithReuseIdentifier: CellReplyLabel.cell_name)

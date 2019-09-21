@@ -2,10 +2,12 @@ import Foundation
 import UIKit
 import SwipeableTabBarController
 
-class VCRestaraunts: SwipeableTabBarController
-{
+class VCRestaraunts: BaseTabController
+{    
     override func viewDidLoad()
     {
+        BaseNavController.getInstance?.setStatusBarColor(black:true)
+        
         super.viewDidLoad()
         self.view.backgroundColor = Colors.getInstance.gray0
         
@@ -32,6 +34,7 @@ class VCRestaraunts: SwipeableTabBarController
     
     override func viewWillLayoutSubviews()
     {
+        setNeedsStatusBarAppearanceUpdate()
         super.viewWillLayoutSubviews()
         
         var navBarHeight:CGFloat = CGFloat(UIDevice.current.navbar_size)
@@ -58,12 +61,7 @@ class VCRestaraunts: SwipeableTabBarController
         return image!
     }
     
-//    func updateSelection() {
-//        let normalFont = Fonts.Lato.light.withSize(10)
-//        let selectedFont = Fonts.Lato.bold.withSize(10)
-//        viewControllers?.forEach {
-//            let selected = $0 == self.selectedViewController
-//            $0.tabBarItem.setTitleTextAttributes([.font: selected ? selectedFont : normalFont], for: .normal)
-//        }
-//    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }

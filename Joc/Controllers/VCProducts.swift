@@ -1,17 +1,21 @@
 import UIKit
+import TinyConstraints
 
 class VCProducts: BaseViewContoller,UICollectionViewDelegate,UICollectionViewDataSource
 {
     var collectionView:UICollectionView?
     var lbl_header:MyLabel?
     var products:[Model_Product]?
-    var listener:ProductCardListener?
+    var listener:ProductsListener?
+    var lblArrowBack : FawLabel?
+    var backPressedListener:BackPressable?
     
-    init(products:[Model_Product],listener:ProductCardListener)
+    init(products:[Model_Product],listener:ProductsListener,backPressedListener:BackPressable)
     {
         self.products = products
         self.listener = listener
-        super.init(nibName: nil, bundle: nil)
+        self.backPressedListener = backPressedListener
+        super.init()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -26,6 +30,8 @@ class VCProducts: BaseViewContoller,UICollectionViewDelegate,UICollectionViewDat
     
     func setup()
     {
+        setNeedsStatusBarAppearanceUpdate()
+        
         var text = ""
         if(products![0].type == 0)
         {
@@ -42,7 +48,8 @@ class VCProducts: BaseViewContoller,UICollectionViewDelegate,UICollectionViewDat
         
         let grad_view = UIView()
         self.view.addSubview(grad_view)
-        grad_view.setAnchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, centerX: nil, centerY: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0,width: 0,height: 54)
+        grad_view.edgesToSuperview(excluding: .bottom)
+        grad_view.height(40+UIDevice.current.status_bar_height)
         grad_view.make_gradient(grad_layer: Colors.getInstance.getOrangeGradient(horizontal: true))
         
         lbl_header = MyLabel()
@@ -52,8 +59,23 @@ class VCProducts: BaseViewContoller,UICollectionViewDelegate,UICollectionViewDat
         
         lbl_header!.text = text
         
-        self.view.addSubview(lbl_header!)
-        lbl_header?.setAnchor(top: grad_view.topAnchor, left: grad_view.leftAnchor, bottom: grad_view.bottomAnchor, right: grad_view.rightAnchor, centerX: nil, centerY: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        grad_view.addSubview(lbl_header!)
+        lbl_header!.bottomToSuperview(offset:-16)
+        lbl_header!.centerXToSuperview()
+        lbl_header!.sizeToFit()
+        
+        lblArrowBack = FawArrowBack.getArrow()
+        grad_view.addSubview(lblArrowBack!)
+        lblArrowBack!.leftToSuperview(offset:20)
+        lblArrowBack!.centerY(to: lbl_header!)
+        lblArrowBack!.sizeToFit()
+        
+        lblArrowBack?.click =
+            {
+                self.backPressedListener?.backPressed()
+        }
+        
+        
         
         
         
@@ -64,7 +86,10 @@ class VCProducts: BaseViewContoller,UICollectionViewDelegate,UICollectionViewDat
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView!.backgroundColor = Colors.getInstance.white
         self.view.addSubview(collectionView!)
-        collectionView?.setAnchor(top: lbl_header?.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, centerX: nil, centerY: nil, paddingTop: 6, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        
+        collectionView!.edgesToSuperview(excluding: .top)
+        collectionView!.topToBottom(of: grad_view,offset: 6)
+ 
         
         collectionView?.register(CellProduct.self, forCellWithReuseIdentifier: CellProduct.cell_name)
         
@@ -89,6 +114,10 @@ class VCProducts: BaseViewContoller,UICollectionViewDelegate,UICollectionViewDat
         }
         
         return cell
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
 
 }

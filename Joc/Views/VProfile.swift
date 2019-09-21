@@ -26,6 +26,12 @@ class VProfile : UIView
         fatalError("init(coder:) has not been implemented")
     }
     
+    func bindUser(user:Model_User)
+    {
+        lbl_name?.text = user.last_name!+" "+user.first_name!
+        lbl_phone?.text = user.phone!
+    }
+    
     func customInit()
     {
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -88,7 +94,7 @@ class VProfile : UIView
         lbl_name = MyLabel()
         lbl_name!.textColor = UIColor.white
         lbl_name?.text = "Mike Penz"
-        lbl_name?.font = Fonts.getInstance.font_bold_xl
+        lbl_name?.font = Fonts.getInstance.font_bold_m
         lbl_name?.numberOfLines = 1
         
         top_view.addSubview(lbl_name!)
@@ -214,7 +220,7 @@ class VProfile : UIView
         
         scroll_view = UIScrollView()
         scroll_view?.translatesAutoresizingMaskIntoConstraints = false
-//        scroll_view?.backgroundColor = UIColor.white
+        scroll_view!.showsVerticalScrollIndicator = false
         
         self.addSubview(scroll_view!)
         scroll_view?.topAnchor.constraint(equalTo: top_view.bottomAnchor, constant: 10).isActive = true

@@ -8,6 +8,15 @@ class VCMap: BaseViewContoller,CLLocationManagerDelegate,GMSMapViewDelegate
     var locationManager = CLLocationManager()
     var viewMap:VMap?
     
+    init()
+    {
+        super.init(statusColorBlack:true)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -30,12 +39,21 @@ class VCMap: BaseViewContoller,CLLocationManagerDelegate,GMSMapViewDelegate
     
     func setupGeoLocation()
     {
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-        locationManager.startMonitoringSignificantLocationChanges()
-        viewMap!.google_map.isMyLocationEnabled = true
-        viewMap!.google_map.settings.myLocationButton = true
+        let lat = 55.750249
+        let long = 37.594228
+        
+        let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: long, zoom: 16.5)
+        
+        viewMap!.google_map.animate(to: camera)
+        
+        bind_restaraunts(restaraunts: RepoRestaraunts.getRestaraunts())
+        
+//        locationManager.delegate = self
+//        locationManager.requestWhenInUseAuthorization()
+//        locationManager.startUpdatingLocation()
+//        locationManager.startMonitoringSignificantLocationChanges()
+//        viewMap!.google_map.isMyLocationEnabled = true
+//        viewMap!.google_map.settings.myLocationButton = true
     }
     
 //    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus)
@@ -87,5 +105,4 @@ class VCMap: BaseViewContoller,CLLocationManagerDelegate,GMSMapViewDelegate
         
         return true
     }
-
 }

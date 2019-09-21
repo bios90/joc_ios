@@ -52,6 +52,14 @@ class RepoProducts
         list.append(weight2)
         list.append(weight3)
         
+        list.append(weight1)
+        list.append(weight2)
+        list.append(weight3)
+        
+        list.append(weight1)
+        list.append(weight2)
+        list.append(weight3)
+        
         return list
     }
     

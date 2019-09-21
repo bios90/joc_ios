@@ -37,8 +37,11 @@ class CellReply: UICollectionViewCell
         la_reply?.setAnchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: contentView.bottomAnchor, right: contentView.rightAnchor, centerX: nil, centerY: nil, paddingTop: 3, paddingLeft: 10, paddingBottom: 0, paddingRight: 10)
         
     
-        let touchRecognizer = UILongPressGestureRecognizer(target:self, action: #selector(pressed))
-        touchRecognizer.minimumPressDuration = 0.03
+//        let touchRecognizer = UILongPressGestureRecognizer(target:self, action: #selector(pressed))
+//        touchRecognizer.minimumPressDuration = 0.03
+        
+        let touchRecognizer = UITapGestureRecognizer(target:self, action: #selector(pressed))
+
         contentView.addGestureRecognizer(touchRecognizer)
         contentView.isUserInteractionEnabled = true
         contentView.clipsToBounds = true

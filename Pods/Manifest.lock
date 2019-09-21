@@ -1,0 +1,61 @@
+PODS:
+  - Cosmos (19.0.3)
+  - GoogleMaps (3.1.0):
+    - GoogleMaps/Maps (= 3.1.0)
+  - GoogleMaps/Base (3.1.0)
+  - GoogleMaps/Maps (3.1.0):
+    - GoogleMaps/Base
+  - GooglePlacePicker (3.1.0):
+    - GoogleMaps (= 3.1.0)
+    - GooglePlaces (= 3.1.0)
+  - GooglePlaces (3.1.0):
+    - GoogleMaps/Base (= 3.1.0)
+  - QuickLayout (3.0.0)
+  - Realm (3.17.3):
+    - Realm/Headers (= 3.17.3)
+  - Realm/Headers (3.17.3)
+  - RealmSwift (3.17.3):
+    - Realm (= 3.17.3)
+  - SwiftEntryKit (1.1.2):
+    - QuickLayout (= 3.0.0)
+  - SwipeableTabBarController (2.1.1)
+  - TinyConstraints (4.0.1)
+
+DEPENDENCIES:
+  - Cosmos (~> 19.0)
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
+  - RealmSwift
+  - SwiftEntryKit (= 1.1.2)
+  - SwipeableTabBarController
+  - TinyConstraints
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Cosmos
+    - GoogleMaps
+    - GooglePlacePicker
+    - GooglePlaces
+    - QuickLayout
+    - Realm
+    - RealmSwift
+    - SwiftEntryKit
+    - SwipeableTabBarController
+    - TinyConstraints
+
+SPEC CHECKSUMS:
+  Cosmos: a6fb17284281fa12cf4c85c2efecd440a215ec44
+  GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
+  GooglePlacePicker: 1c60c2a26e9d1e73bcb0c6f89609db8d777d13c1
+  GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
+  Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
+  RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
+  SwiftEntryKit: 08bf114650b41d4d825924211943b6a80801e823
+  SwipeableTabBarController: 8f7f04275f510c5babb630f7be1161b5f28567e0
+  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
+
+PODFILE CHECKSUM: f7b3481afdfc5023c3ff3b53ae52ebeebf85945f
+
+COCOAPODS: 1.5.3

@@ -2,20 +2,24 @@ import Foundation
 import UIKit
 import SwiftEntryKit
 
-class VCFirst: BaseViewContoller
+class VCFirst: BaseViewContoller, UITextFieldDelegate
 {
     var viewFirst:VFirst? = nil
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        if(realmHelper.getLoggedUser() != nil)
+        {
+            self.navigationManager?.toVcMain(animated: false)
+        }
+        
         loadViews()
-        check_for_login()
     }
     
     func loadViews()
     {
-        self.navigationController!.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = true
         
         viewFirst = VFirst()
         self.view.addSubview(viewFirst!)
@@ -27,8 +31,7 @@ class VCFirst: BaseViewContoller
         
         viewFirst!.btn_login!.click =
             {
-                self.navigationManager?.toVcMain()
-//                self.make_fake_login()
+                self.make_fake_login()
         }
         
         viewFirst!.lbl_register!.click =
@@ -37,6 +40,9 @@ class VCFirst: BaseViewContoller
                 self.navigationController?.pushViewController(v, animated: true)
         }
         
+        viewFirst!.et_phone!.delegate = self
+        viewFirst!.et_password!.delegate = self
+        
     }
     
     func make_fake_login()
@@ -44,20 +50,29 @@ class VCFirst: BaseViewContoller
         let phone = viewFirst!.et_phone?.get_nullable_text()
         let password = viewFirst!.et_password?.get_nullable_text()
         
+        if(phone == nil || password == nil)
+        {
+            messagesManager?.showRedAlerter(text: "Ошибка входа")
+            return
+        }
+        
+        if(phone == "12345678" && password == "12345678")
+        {
+            realmHelper.saveDymmyUser()
+            self.navigationManager?.toVcMain()
+            return
+        }
+        
         let user = realmHelper.make_fake_login(phone: phone!, password: password!)
         
         if(user == nil)
         {
-            messagesManager?.showRedAlerter(text: "Erororor")
+            messagesManager?.showRedAlerter(text: "Ошибка входа")
         }else
         {
-            messagesManager?.showGreenAlerter(text: "Successs")
+            realmHelper.save_login_user(user: user!)
+            self.navigationManager?.toVcMain()
         }
-    }
-    
-    func check_for_login()
-    {
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
@@ -67,5 +82,10 @@ class VCFirst: BaseViewContoller
         super.touchesBegan(touches , with:event)
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
+    }
 
 }

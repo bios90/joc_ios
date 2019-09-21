@@ -33,7 +33,7 @@ class CellRestarauntTop: UICollectionViewCell
         lbl_name!.textColor = Colors.getInstance.white
         lbl_name!.text = restaunt.name
         
-        let padding_top:CGFloat = UIDevice.current.status_bar_heigh+16
+        let padding_top:CGFloat = UIDevice.current.status_bar_height+16
         
         
         self.contentView.addSubview(lbl_name!)

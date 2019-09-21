@@ -31,6 +31,29 @@ extension UIView
         }
     }
     
+    func removeStackSubviews()
+    {
+//        let stack = self as! UIStackView
+//        stack.arrangedSubviews.forEach({ $0.removeFromSuperview() })
+    }
+    
+    func removeAllSubviews()
+    {
+        self.subviews.forEach({ $0.removeFromSuperview() })
+    }
+    
+    func resizeScrollToStack(stack:UIStackView)
+    {
+        let scroll = self as! UIScrollView
+        
+        scroll.layoutIfNeeded()
+        stack.layoutIfNeeded()
+        scroll.contentSize.width = stack.frame.width
+        scroll.contentSize.height = stack.frame.height
+        
+        print("Content height is \(stack.frame.height)")
+    }
+    
     func make_gradient(grad_layer:CAGradientLayer)
     {
         self.layoutIfNeeded()

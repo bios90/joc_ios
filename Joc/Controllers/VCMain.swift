@@ -28,5 +28,6 @@ class VCMain: BaseTabController
         let tabBarList = [vcProfile, vcMap, vcRestaraunts]
         
         viewControllers = tabBarList
+        selectedIndex = 1
     }
 }

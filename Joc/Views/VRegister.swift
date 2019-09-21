@@ -41,6 +41,14 @@ class VRegister : UIView
         et_phone!.font = Fonts.getInstance.font_reg_s
         et_phone!.set_hint(text: "Телефон...", color: Colors.getInstance.white50)
         et_phone!.keyboardType = .phonePad
+        let toolbar = StaticViews.getNumberToolbar()
+        toolbar.items![0].target = self
+        toolbar.items![0].action = #selector(self.clikedCancel)
+        
+        toolbar.items![2].target = self
+        toolbar.items![2].action = #selector(self.clikedDone)
+        
+        et_phone!.inputAccessoryView = toolbar
         
         self.addSubview(et_phone!)
         et_phone!.widthAnchor.constraint(equalToConstant: 300).isActive = true
@@ -129,5 +137,16 @@ class VRegister : UIView
     override func draw(_ rect: CGRect)
     {
         btn_register!.layer.cornerRadius = btn_register!.frame.height/2
+    }
+    
+    @objc func clikedDone ()
+    {
+        et_phone!.resignFirstResponder()
+    }
+    
+    @objc func clikedCancel ()
+    {
+        et_phone!.resignFirstResponder()
+        et_phone!.text=""
     }
 }
